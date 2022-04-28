@@ -18,4 +18,9 @@ class Post extends Model
     {
         return strtoupper($this->title);
     }
+
+    public function setTitleAttribute($value)
+    {
+        return $this->attributes['title'] = strtolower($value);
+    }
 }
